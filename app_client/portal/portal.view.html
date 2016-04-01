@@ -6,12 +6,40 @@
    <div class="row">
    	<div class="col-md-6">
    		<div class="panel panel-default">
-   			<div class="panel-heading"><h3>External Accounts</h3></div>
+   			<div class="panel-heading"><h3>External Accounts for {{vm.currentProfile.name}}</h3></div>
    			<div class="panel-body">
-				<div class="checkbox"><label ><input type="checkbox">Facebook</label></div>
-				<div class="checkbox"><label ><input type="checkbox">Google+</label></div>
-				<div class="checkbox"><label ><input type="checkbox">Twitter</label></div>
-				<div class="checkbox"><label ><input type="checkbox">Vimeo</label></div>
+				<div class="checkbox"><label ><input ng-model="vm.fb" type="checkbox">Facebook</label>
+        <ul >
+          <li><label ><input type="checkbox">Video Content</label></li>
+          <li><label ><input type="checkbox">Profile Space</label></li>
+          <div ng-show="vm.fb">
+            <img img-responsive src="rsc/FBconnect.PNG" alt="">
+          </div>
+        </ul>
+            
+        
+        </div>
+				<div class="checkbox"><label ><input ng-model="vm.gle" type="checkbox">Google+</label>
+          <ul >
+            <li><label ><input type="checkbox">Video Content</label></li>
+            <li><label ><input type="checkbox">Profile Space</label></li>
+            <div ng-show="vm.gle">
+            <img src="rsc/googleconnect.png" alt="">
+          </div>
+          </ul>
+        </div>
+				<div class="checkbox"><label ><input type="checkbox">Twitter</label>
+        <ul >
+          <li><label ><input type="checkbox">Video Content</label></li>
+          <li><label ><input type="checkbox">Profile Space</label></li>
+        </ul>
+        </div>
+				<div class="checkbox"><label ><input type="checkbox">Vimeo</label>
+        <ul >
+          <li><label ><input type="checkbox">Video Content</label></li>
+          <li><label ><input type="checkbox">Profile Space</label></li>
+        </ul>
+        </div>
 
    				
    			</div>

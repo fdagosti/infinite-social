@@ -4,8 +4,8 @@
        .module('infiniteSocialApp')
        .service('infiniteData', infiniteData);
 
-    infiniteData.$inject = ["$http"];   
-    function infiniteData ($http) {
+    infiniteData.$inject = ["$http", "$rootScope"];   
+    function infiniteData ($http, $rootScope) {
        var videoRecos = function (lat, lng) {
          return [
     [
@@ -86,15 +86,51 @@
        }; 
 
        var profiles = function(locationid, data) {
-        
+          
        };
 
-       
+       var profiles = {
+        currentProfile : 0,
+        profileList: [
+        {
+          name : "Francois"
+        },
+        {
+          name : "Rachid"
+        },
+        {
+          name : "Thomas"
+        },
+        {
+          name : "Mohammed"
+        },
+       ]
+     };
+
+     var getProfiles = function(){
+      return profiles;
+     };
+
+       var currentProfile = function(){
+          return profiles.profileList[profiles.currentProfile];
+       };
+
+       var setCurrentProfile = function(profileName){
+        console.log(profileName);
+
+          profiles.currentProfile = profileName;
+          $rootScope.$emit('profile-change');
+
+          console.log("profile = "+profiles.currentProfile);
+       };
 
        return {
          videoRecos : videoRecos,
          socialData : socialData,
-         profiles : profiles
+         profiles : profiles,
+         currentProfile : currentProfile,
+         setCurrentProfile: setCurrentProfile,
+         getProfiles:getProfiles
        };
     };
 })();
