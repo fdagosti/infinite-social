@@ -8,30 +8,30 @@
    		<div class="panel panel-default">
    			<div class="panel-heading"><h3>External Accounts for {{vm.currentProfile.name}}</h3></div>
    			<div class="panel-body">
-				<div class="checkbox"><label ><input ng-model="vm.fb" type="checkbox">Facebook</label>
+				<div class="checkbox"><label ><input ng-model="vm.currentProfile.fb" type="checkbox">Facebook</label>
         <ul >
-          <li><label ><input type="checkbox">Video Content</label></li>
-          <li><label ><input type="checkbox">Profile Space</label></li>
-          <div ng-show="vm.fb">
+          <li><label ><input ng-model="vm.currentProfile.fbvc" type="checkbox">Video Content</label></li>
+          <li><label ><input ng-model="vm.currentProfile.fbps" type="checkbox">Profile Space</label></li>
+          <div ng-show="vm.currentProfile.fb">
             <img img-responsive src="rsc/FBconnect.PNG" alt="">
           </div>
         </ul>
             
         
         </div>
-				<div class="checkbox"><label ><input ng-model="vm.gle" type="checkbox">Google+</label>
+				<div class="checkbox"><label ><input ng-model="vm.currentProfile.gle" type="checkbox">Google+</label>
           <ul >
-            <li><label ><input type="checkbox">Video Content</label></li>
-            <li><label ><input type="checkbox">Profile Space</label></li>
-            <div ng-show="vm.gle">
+            <li><label ><input ng-model="vm.currentProfile.glvc" type="checkbox">Video Content</label></li>
+            <li><label ><input ng-model="vm.currentProfile.glps" type="checkbox">Profile Space</label></li>
+            <div ng-show="vm.currentProfile.gle">
             <img src="rsc/googleconnect.png" alt="">
           </div>
           </ul>
         </div>
 				<div class="checkbox"><label ><input type="checkbox">Twitter</label>
         <ul >
-          <li><label ><input type="checkbox">Video Content</label></li>
-          <li><label ><input type="checkbox">Profile Space</label></li>
+          <li><label ><input ng-model="vm.currentProfile.twvc" type="checkbox">Video Content</label></li>
+          <li><label ><input ng-model="vm.currentProfile.twps" type="checkbox">Profile Space</label></li>
         </ul>
         </div>
 				<div class="checkbox"><label ><input type="checkbox">Vimeo</label>
