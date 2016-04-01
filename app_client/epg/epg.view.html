@@ -1,12 +1,22 @@
+<video autoplay muted loop src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_640x360.m4v"></video>
 <navigation></navigation>
 
 <div class="container">
 	<page-header content="vm.pageHeader"></page-header>
 
+	
+
 	<div class="row">
 		<div class="col-md-6"><p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu libero metus. Sed dolor nisi, suscipit semper rutrum eu, dapibus commodo leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin volutpat efficitur elementum. Sed imperdiet faucibus libero ac hendrerit. Donec cursus faucibus tempor. Quisque imperdiet ex lacus. Mauris condimentum est vel ipsum dignissim hendrerit. Aliquam lorem nunc, efficitur quis justo in, condimentum rhoncus magna.
-		</p></div>
+			This screen represents an epg where each data is fetched by the IH Rest API, which in turn is delegating to the list of selected 3rd party services.<br/>
+			Each service is linked with the current profile securely through token authentication rather than the real credentials
+	
+		</p>
+
+		</div>
+
+
+
 
 		<div class="col-md-6">
 			<div class="panel panel-default">
@@ -16,16 +26,18 @@
 				<div class="panel-body">
 
 					<div class="pull-right">
-						<p >122 <img src="http://weknowyourdreamz.com/images/friend/friend-02.jpg" alt="" height="50" width="60"></p>
+						<p >{{vm.social.friends}} <img src="http://weknowyourdreamz.com/images/friend/friend-02.jpg" alt="" height="50" width="60"></p>
 						<ul class="list-unstyled">
-							<li >That's great buddy !!!</li>
-							<li >Oh my god, don't believe it</li>
-							<li >Vanessa likes Games of Thrones</li>
+							<li ng-repeat="notif in vm.social.notifs">{{notif}}</li>
+							
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>  	
+
+
+
 
 
 		<div class="row">
@@ -35,38 +47,19 @@
 						<h3 class="panel-title">Video Recomendations</h3>
 					</div>
 					<div class="panel-body">
-						<div class="row">
 
-							<div class="col-sm-3">
+						<div class="row" ng-repeat="line in vm.videoRecos">
+							
+							<div class="col-sm-3" ng-repeat="video in line">
 								<div class="thumbnail">
-									<img src="http://media.senscritique.com/media/000012353851/source_big/Mission_Impossible.jpg" alt="" class="img-responsive">
+									<img src={{video.img}} alt="" class="img-responsive">
 									<div class="caption">
-										<h4 >Mission impossible</h4>
-										<p>is tom saving the day ??</p>
+										<h4 >{{video.title}}</h4>
+										<p>{{video.description}}</p>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-3">
-								<div class="thumbnail">
-									<img src="http://fr.web.img3.acsta.net/pictures/15/06/26/09/01/245552.jpg" alt="" class="img-responsive">
-									<h4 >Mission impossible 5</h4>
-									<p class="list-group-item-text">is tom saving the day ??</p>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="thumbnail">
-									<img src="http://img.actucine.com/wp-content/uploads/2015/06/Mission-Impossible-5-150604-07.jpg" alt="" class="img-responsive">
-									<h4 >Mission impossible</h4>
-									<p class="list-group-item-text">is tom saving the day ??</p>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="thumbnail">
-									<img src="http://img.actucine.com/wp-content/uploads/2015/06/Mission-Impossible-5-150604-07.jpg" alt="" class="img-responsive">
-									<h4 >Mission impossible</h4>
-									<p class="list-group-item-text">is tom saving the day ??</p>
-								</div>
-							</div>
+							
 							
 
 						</div>
