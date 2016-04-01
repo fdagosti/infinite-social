@@ -94,6 +94,10 @@
         profileList: [
         {
           name : "Francois",
+          social: {
+          friends : 345,
+        notifs: ["Francois, tu es beau", "laura a publie une photo", "ca te dit une bouffe ce soir ?"],
+        },
           videoRecos : [
     [
         {
@@ -121,6 +125,10 @@
         },
         {
           name : "Rachid",
+           social: {
+          friends : 2,
+        notifs: ["Rachid a change de profil", "Vous avez un message", "Great dinner yesterday !!"],
+      },
           videoRecos: [
     [
         {
@@ -148,6 +156,10 @@
         },
         {
           name : "Thomas",
+           social: {
+          friends : 3457,
+        notifs: ["Thomas, please see this job offer", "is your girlfriend satisfied ?", "Super match hier !!!"],
+      },
           videoRecos: [
     [
         {
@@ -175,6 +187,10 @@
         },
         {
           name : "Mohammed",
+           social: {
+          friends : 35,
+        notifs: ["Mohammed is now happy", "Amelie veut devenir votre amie", "Vous avez 5 notfication en attente"],
+      },
           videoRecos: [
     [
         {
