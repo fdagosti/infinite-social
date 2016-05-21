@@ -4,8 +4,9 @@
        .module('infiniteSocialApp')
        .service('infiniteData', infiniteData);
 
-    infiniteData.$inject = ["$http", "$rootScope"];   
-    function infiniteData ($http, $rootScope) {
+    infiniteData.$inject = ["$http", "$rootScope", "authentication"];   
+    function infiniteData ($http, $rootScope, authentication) {
+      authentication.login();
        var videoRecos = function (lat, lng) {
          return [
     [
@@ -84,10 +85,6 @@
        var socialData = function(locationid) {
         
        }; 
-
-       var profiles = function(locationid, data) {
-          
-       };
 
        var profiles = {
         currentProfile : 0,
